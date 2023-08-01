@@ -1,0 +1,299 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Space Grotesk";
+  font-size: "18px";
+  font-weight: 500;
+}
+
+.container {
+  width: 375px;
+  height: 704px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+@media only screen and (min-width:80em) {
+  .container {
+    width: 100vw;
+    height: 100vh;
+    flex-direction: row;
+  }
+}
+
+.section2 {
+  width: 375px;
+  height: 465px;
+  padding: 85px 25px;
+}
+@media only screen and (min-width:80em) {
+  .section2 {
+    width: 957px;
+    padding: 275px 350px;
+  }
+}
+
+.cards {
+  width: 375px;
+  height: 239px;
+  background-image: url(../images/bg-main-mobile.png);
+  background-repeat: no-repeat;
+  position: relative;
+}
+@media only screen and (min-width:80em) {
+  .cards {
+    width: 483px;
+    height: 100vh;
+    background-image: url(../images/bg-main-desktop.png);
+  }
+}
+
+.card-front {
+  width: 285px;
+  height: 157px;
+  background-size: contain;
+  color: hsl(0, 0%, 100%);
+  background-image: url(../images/bg-card-front.png);
+  position: absolute;
+  top: 120px;
+  left: 15px;
+  padding: 20px;
+  z-index: 1;
+}
+@media only screen and (min-width:80em) {
+  .card-front {
+    width: 445px;
+    height: 245px;
+  }
+}
+@media only screen and (min-width:80em) {
+  .card-front {
+    position: absolute;
+    top: 187px;
+    left: 163px;
+    z-index: 0;
+  }
+}
+.card-front__img {
+  margin-bottom: 40px;
+}
+@media only screen and (min-width:80em) {
+  .card-front__img {
+    margin-bottom: 65px;
+  }
+}
+.card-front__img img {
+  width: 60px;
+}
+@media only screen and (min-width:80em) {
+  .card-front__img img {
+    width: 90px;
+  }
+}
+.card-front__cardNumber {
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+  margin-bottom: 10px;
+}
+@media only screen and (min-width:80em) {
+  .card-front__cardNumber {
+    font-size: 1.8rem;
+    letter-spacing: 0.25rem;
+    margin-bottom: 20px;
+  }
+}
+.card-front__dates {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.7rem;
+  color: hsl(0, 0%, 100%);
+  text-transform: uppercase;
+}
+@media only screen and (min-width:80em) {
+  .card-front__dates {
+    font-size: 1.05rem;
+  }
+}
+.card-front__dates--name {
+  overflow: hidden;
+  width: 200px;
+  white-space: nowrap;
+  letter-spacing: 0.1rem;
+}
+@media only screen and (min-width:80em) {
+  .card-front__dates--name {
+    width: 300px;
+  }
+}
+
+.card-back {
+  width: 285px;
+  height: 157px;
+  background-size: contain;
+  color: hsl(0, 0%, 100%);
+  background-image: url(../images/bg-card-back.png);
+  position: absolute;
+  top: 32px;
+  left: 72px;
+}
+@media only screen and (min-width:80em) {
+  .card-back {
+    width: 445px;
+    height: 245px;
+  }
+}
+@media only screen and (min-width:80em) {
+  .card-back {
+    position: absolute;
+    top: 470px;
+    left: 250px;
+  }
+}
+.card-back__cvc {
+  position: relative;
+  top: 70px;
+  left: 225px;
+  font-size: 0.7rem;
+}
+@media only screen and (min-width:80em) {
+  .card-back__cvc {
+    top: 110px;
+    left: 355px;
+    font-size: 1.05rem;
+  }
+}
+
+.miscards {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  z-index: 1;
+  gap: 5px;
+}
+.miscards .card {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.form {
+  height: 465px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 12px;
+}
+@media only screen and (min-width:80em) {
+  .form {
+    width: 380px;
+  }
+}
+.form label {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-size: 0.7rem;
+  margin-bottom: 8px;
+}
+.form input {
+  width: 100%;
+  height: 45px;
+  padding-left: 10px;
+  border: 1px solid hsl(270, 3%, 87%);
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  cursor: pointer;
+}
+.form input::-moz-placeholder {
+  color: hsl(279, 6%, 55%);
+}
+.form input::placeholder {
+  color: hsl(279, 6%, 55%);
+}
+.form__date {
+  display: flex;
+  gap: 15px;
+}
+.form__date .expire-dates {
+  display: flex;
+  gap: 10px;
+}
+.form__date .expire-dates input {
+  width: 70px;
+}
+@media only screen and (min-width:80em) {
+  .form__date .expire-dates input {
+    width: 85px;
+  }
+}
+.form .error {
+  font-size: 0.6rem;
+  color: hsl(0, 100%, 66%);
+  position: relative;
+  transform: translateY(-30px);
+  transition: 0.2s;
+  z-index: -1;
+}
+@media only screen and (min-width:80em) {
+  .form .error {
+    font-size: 0.72rem;
+    transition: 0.5s;
+  }
+}
+.form button {
+  padding: 18px;
+  background: hsl(278, 68%, 11%);
+  color: hsl(0, 0%, 100%);
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.complete {
+  height: 365px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+@media only screen and (min-width:80em) {
+  .complete {
+    width: 380px;
+  }
+}
+.complete__img {
+  width: 80px;
+  margin-bottom: 35px;
+}
+.complete__h1 {
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.complete__parrafo {
+  font-weight: 500;
+  color: hsl(279, 6%, 55%);
+  margin-bottom: 50px;
+}
+.complete__continue {
+  padding: 18px;
+  background: hsl(278, 68%, 11%);
+  color: hsl(0, 0%, 100%);
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 100%;
+  text-decoration: none;
+  text-align: center;
+}/*# sourceMappingURL=styles.css.map */

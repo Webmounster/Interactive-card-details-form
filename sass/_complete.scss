@@ -1,0 +1,36 @@
+@use 'variables';
+@use 'mixins';
+.complete {
+    height: 365px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    @media #{variables.$dektop} {
+        width: 380px;
+    }
+
+    &__img {
+        width: 80px;
+        margin-bottom: 35px;
+    }
+
+    &__h1 {
+        text-transform: uppercase;
+        font-weight: 500;
+        margin-bottom: 20px;
+    }
+    &__parrafo {
+        font-weight: 500;
+        color: variables.$DarkGrayishViolet;
+        margin-bottom: 50px;
+    }
+
+    &__continue {
+        @include mixins.btn;
+        width: 100%;
+        text-decoration: none;
+        text-align: center;
+    }
+}

@@ -1,0 +1,57 @@
+@use 'variables';
+@use 'mixins';
+
+.form {
+    height: 465px;
+    // padding: 95px 25px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 12px;
+
+    @media #{variables.$dektop} {
+        width: 380px;
+    }
+
+    label {
+        @include mixins.label;
+    }
+
+    input {
+        @include mixins.input;
+    }
+
+    &__date {
+        display: flex;
+        gap: 15px;
+
+        .expire-dates {
+            display: flex;
+            gap: 10px;
+
+            input {
+                width: 70px;
+                @media #{variables.$dektop} {
+                    width: 85px;
+                }
+            }
+        }
+    }
+    .error {
+        font-size: 0.6rem;
+        color: variables.$Red;
+        position: relative;
+        transform: translateY(-30px);
+        transition: 0.2s;
+        z-index: -1;
+
+        @media #{variables.$dektop} {
+            font-size: 0.6rem * 1.2;
+            transition: 0.5s;
+        }
+    }
+
+    button {
+        @include mixins.btn;
+    }
+}

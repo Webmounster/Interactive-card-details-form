@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./css/styles.css">
+  <title>Frontend Mentor | Interactive card details form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="cards">
+      <div class="miscards">
+        <img src="./images/bg-card-front.png" alt="card1" class="card card1">
+        <img src="./images/snake.png" alt="card2" class="card card2">
+        <img src="./images/illusions.png" alt="card3" class="card card3">
+        <img src="./images/dragon-ball.png" alt="card4" class="card card4">
+      </div>
+      <div class="card-front">
+        <div class="card-front__img"><img src="./images/card-logo.svg" alt="logo"></div>
+        <div class="card-front__cardNumber "><span class="cardNumber">0000 0000 0000 0000</span></div>
+        <div class="card-front__dates">
+          <div class="card-front__dates--name">
+            <span class="cardName">Jane Appleseed</span>
+          </div>
+          <div class="card-front__dates--year cardExpire"><span class="expMonth">00</span><span
+              class="expBarra">/</span><span class="expYear">00</span></div>
+        </div>
+      </div>
+
+      <div class="card-back">
+        <div class="card-back__cvc cardCvc">000</div>
+      </div>
+    </div>
+
+    <div class="section2">
+      <form class="form" action="#" method="post">
+        <div class="form__name">
+          <label class="form__name-label" for="name">Cardholder Name</label>
+          <input class="form__name-input" type="text" name="" id="" placeholder="e.g. Jane Appleseed">
+          <div class="error">error</div class="error">
+        </div>
+
+        <div class="form__cardNumber">
+          <label class="form__cardNumber-label" for="cardNumber">Card Number</label>
+          <input class="form__cardNumber-input" type="text" maxlength="19" name="" id=""
+            placeholder="e.g. 1234 5678 9123 0000">
+          <div class="error">error</div class="error">
+        </div>
+
+        <div class="form__date">
+          <div class="expire">
+            <label class="expire__label" for="exp">Exp. Date (MM/YY)</label>
+            <div class="expire-dates">
+              <div>
+                <input class="expire__month" type="text" maxlength="2" name="" id="" placeholder="MM">
+                <div class="error">error</div class="error">
+              </div>
+              <div>
+                <input class="expire__year" type="text" maxlength="2" name="" id="" placeholder="YY">
+                <div class="error">error</div class="error">
+              </div>
+            </div>
+          </div>
+
+          <div class="form__cvc">
+            <label class="cvc__label" for="name">CVC</label>
+            <input class="cvc__input" type="text" maxlength="3" name="" id="" placeholder="e.g. 123">
+            <div class="error">error</div class="error">
+
+          </div>
+        </div>
+
+        <button class="btnSubmit" type="submit">Confirm</button>
+      </form>
+      <!-- Completed state start -->
+      <div class="complete">
+        <img class="complete__img" src="./images/icon-complete.svg" alt="icon Complete">
+        <h1 class="complete__h1"> Thank you!</h1>
+        <p class="complete__parrafo"> We've added your card details</p>
+        <a class="complete__continue" href="#">Continue</a>
+
+      </div>
+
+    </div>
+
+
+
+  </div>
+
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+
+  <script src="./js/main.js"></script>
+</body>
+
+</html>

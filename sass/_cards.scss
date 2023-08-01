@@ -1,0 +1,120 @@
+@use 'mixins';
+@use 'variables';
+
+.cards {
+    width: 375px;
+    height: 239px;
+    background-image: url(../images/bg-main-mobile.png);
+    background-repeat: no-repeat;
+    position: relative;
+
+    @media #{variables.$dektop} {
+        width: 483px;
+        height: 100vh;
+        background-image: url(../images/bg-main-desktop.png);
+    }
+}
+
+.card-front {
+    @include mixins.card;
+    background-image: url(../images/bg-card-front.png);
+    position: absolute;
+    top: 120px;
+    left: 15px;
+    padding: 20px;
+    z-index: 1;
+
+    @media #{variables.$dektop} {
+        position: absolute;
+        top: 187px;
+        left: 163px;
+        z-index: 0;
+    }
+
+    &__img {
+        margin-bottom: 40px;
+        @media #{variables.$dektop} {
+            margin-bottom: 65px;
+        }
+        img {
+            width: 60px;
+            @media #{variables.$dektop} {
+                width: 60px * 1.5;
+            }
+        }
+    }
+
+    &__cardNumber {
+        font-size: 1.2rem;
+        letter-spacing: 0.1rem;
+        margin-bottom: 10px;
+
+        @media #{variables.$dektop} {
+            font-size: 1.2rem * 1.5;
+            letter-spacing: 0.1rem * 2.5;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__dates {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.7rem;
+        color: variables.$White;
+        text-transform: uppercase;
+
+        @media #{variables.$dektop} {
+            font-size: 0.7rem * 1.5;
+        }
+
+        &--name {
+            overflow: hidden;
+            width: 200px;
+            white-space: nowrap;
+            letter-spacing: 0.1rem;
+
+            @media #{variables.$dektop} {
+                width: 300px;
+            }
+        }
+    }
+}
+
+.card-back {
+    @include mixins.card;
+    background-image: url(../images/bg-card-back.png);
+    position: absolute;
+    top: 32px;
+    left: 72px;
+
+    @media #{variables.$dektop} {
+        position: absolute;
+        top: 470px;
+        left: 250px;
+    }
+
+    &__cvc {
+        position: relative;
+        top: 70px;
+        left: 225px;
+        font-size: 0.7rem;
+
+        @media #{variables.$dektop} {
+            top: 110px;
+            left: 355px;
+            font-size: 0.7rem * 1.5;
+        }
+    }
+}
+.miscards {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    z-index: 1;
+    gap: 5px;
+
+    .card {
+        @include mixins.cards;
+    }
+}
