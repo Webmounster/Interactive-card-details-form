@@ -66,15 +66,15 @@ btnContinue.addEventListener('click', () => {
 
 
 card1.addEventListener('click', () => {
-    currentImage = cardFront.style.backgroundImage = 'url(../images/bg-card-front.png)';
+    currentImage = cardFront.style.backgroundImage = 'url("images/bg-card-front.png")';
     changeColor('white');
 });
 card2.addEventListener('click', () => {
-    currentImage = cardFront.style.backgroundImage = 'url(../images/snake.png)';
+    currentImage = cardFront.style.backgroundImage = 'url("../images/snake.png")';
     changeColor('white');
 });
 card3.addEventListener('click', () => {
-    currentImage = cardFront.style.backgroundImage = 'url(../images/illusions.png)';
+    currentImage = cardFront.style.backgroundImage = 'url(images/illusions.png)';
     changeColor('#1792a4');
 });
 
