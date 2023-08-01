@@ -66,11 +66,11 @@ btnContinue.addEventListener('click', () => {
 
 
 card1.addEventListener('click', () => {
-    currentImage = cardFront.style.backgroundImage = 'url("images/bg-card-front.png")';
+    currentImage = cardFront.style.backgroundImage = 'url(images/bg-card-front.png)';
     changeColor('white');
 });
 card2.addEventListener('click', () => {
-    currentImage = cardFront.style.backgroundImage = 'url("../images/snake.png")';
+    currentImage = cardFront.style.backgroundImage = 'url(images/snake.png)';
     changeColor('white');
 });
 card3.addEventListener('click', () => {
@@ -79,7 +79,7 @@ card3.addEventListener('click', () => {
 });
 
 card4.addEventListener('click', () => {
-    currentImage = cardFront.style.backgroundImage = 'url(../images/dragon-ball.png)';
+    currentImage = cardFront.style.backgroundImage = 'url(images/dragon-ball.png)';
     changeColor('#1225f3');
 });
 
